@@ -4,10 +4,10 @@ import 'package:api_practice/models/popmovies_model.dart';
 import 'package:http/http.dart' as http;
 
 class ApiService {
-  final String baseURL = "https://movies-api.nomadcoders.workers.dev";
-  final String popular = "popular";
+  static const String baseURL = "https://movies-api.nomadcoders.workers.dev";
+  static const String popular = "popular";
 
-  Future<List<PopMoviesModel>> getPopMovies() async {
+  static Future<List<PopMoviesModel>> getPopMovies() async {
     List<PopMoviesModel> popmovieInstances = [];
     final url = Uri.parse('$baseURL/$popular');
     final response = await http.get(url);

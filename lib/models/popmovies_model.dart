@@ -10,6 +10,6 @@ class PopMoviesModel {
 
   PopMoviesModel.fromJson(Map<String, dynamic> json)
       : title = json['original_title'],
-        thumb = 'https://image.tmdb.org/t/p/w500/${json['backdrop_path']}',
+        thumb = 'https://image.tmdb.org/t/p/w500/${json['poster_path']}',
         id = json['id'];
 }
